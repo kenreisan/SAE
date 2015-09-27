@@ -42,7 +42,7 @@ class Alumno {
 		Menu menu = new Menu();
 		
 		do{
-			opcion = menu.ListaMenu("1)Nombre\n2)Genero\n3)Calificaciones\n4)Salir\nOpcion: ",3);
+			opcion = menu.ListaMenu("1)Nombre\n2)Genero\n3)Calificaciones\n4)Salir\nOpcion: ",4);
 		   	switch (opcion) {
 				case 1:
 					LeeNom();
@@ -56,7 +56,7 @@ class Alumno {
 					calif.Actualizar();
 				break;
 			}
-		} while (opcion != 3);
+		} while (opcion !=4);
 	}
 
 	public int GetClave(){
