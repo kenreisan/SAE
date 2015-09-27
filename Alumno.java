@@ -5,10 +5,12 @@ class Alumno {
 	private String nom;	
 	private String genero;	
 	private Calificaciones calif;
+	private Carrera carr;
 	
 //CONSTRUCTORES
 	public Alumno(){
 		calif = new Calificaciones(); //se crea el objeto 
+		carr = new Carrera();
 	}
 	
 //METODOS
@@ -17,6 +19,7 @@ class Alumno {
 		LeeClave();
 		LeeNom();
 		LeeGenero();
+		carr.ElegirCarrera();
 		calif.CapturaCalificaciones();
 	}
 	
