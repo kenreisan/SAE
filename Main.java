@@ -30,17 +30,17 @@ class Main{
 				case 2: miarreglo.Listar();			
 						break;
 						
-			    case 3: dato = Teclado.LeeEntero("Dame la clave del empleado actualizar: ");
+			    case 3: dato = Teclado.LeeEntero("Dame la clave del alumno actualizar: ");
 						  pos = miarreglo.Buscar(dato);
 						  if (pos !=-1)
 						  		miarreglo.Actualizar(pos);
 						  break;	
-			    case 4: dato = Teclado.LeeEntero("Dame la clave del empleado: ");
+			    case 4: dato = Teclado.LeeEntero("Dame la clave del alumno: ");
 						  pos = miarreglo.Buscar(dato);
 						  if (pos !=-1)
 						  		miarreglo.Listar(pos);
 						  break;
-				case 5: dato = Teclado.LeeEntero("Dame la clave del empleado borrar: ");
+				case 5: dato = Teclado.LeeEntero("Dame la clave del alumno borrar: ");
 						  pos = miarreglo.Buscar(dato);
 						  if (pos !=-1){
 						  		obj2 = miarreglo.Borrar(pos);

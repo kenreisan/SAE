@@ -4,7 +4,7 @@ class Calificaciones {
       private int calculo;
       private int geometria;
       private int algebra;
-      private int progra;	
+      private int estatica;	
    
 //CONSTRUCTORES
 
@@ -14,7 +14,7 @@ class Calificaciones {
          LeeCalculo();
          LeeGeometria();
          LeeAlgebra();
-         LeeProgra();
+         LeeEstatica();
       }	
 
       public void LeeCalculo() {
@@ -29,12 +29,13 @@ class Calificaciones {
          algebra = Teclado.LeeEntero("Algebra: ");
       }
 
-      public void LeeProgra() {
-         progra = Teclado.LeeEntero("Progamacion Avanzada: ");
+      public void LeeEstatica() {
+         estatica = Teclado.LeeEntero("Estatica: ");
       }
 
 	public void Listar() {		
-		System.out.println(calculo+",\n "+geometria+",\n "+algebra+",\n "+progra);
+		System.out.println("\nCalificaciones: \n"+
+         "Calculo:\t"+calculo+"\nGeometria:\t"+geometria+"\nAlgebra:\t"+algebra+"\nEstatica:\t"+estatica);
 	}
 
 	public void Actualizar() {
@@ -56,7 +57,7 @@ class Calificaciones {
 				break;
 				
             case 4:
-               LeeProgra();
+               LeeEstatica();
 				break;
 			}
 		} while (opcion != 5);

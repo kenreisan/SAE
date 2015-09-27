@@ -5,10 +5,12 @@ class Alumno {
 	private String nom;	
 	private String genero;	
 	private Calificaciones calif;
+	private Carrera carr;
 	
 //CONSTRUCTORES
 	public Alumno(){
 		calif = new Calificaciones(); //se crea el objeto 
+		carr = new Carrera();
 	}
 	
 //METODOS
@@ -17,6 +19,7 @@ class Alumno {
 		LeeClave();
 		LeeNom();
 		LeeGenero();
+		carr.ElegirCarrera();
 		calif.CapturaCalificaciones();
 	}
 	
@@ -33,7 +36,8 @@ class Alumno {
 	}
 
 	public void Listar(){
-        System.out.print(clave+"\t"+nom+"\t"+genero+"\t");
+        System.out.print("Cta: "+clave+"\t"+nom+"\tGenero: "+genero+"\t");
+        carr.Listar();
         calif.Listar();
     }
 	
