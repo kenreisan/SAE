@@ -72,4 +72,13 @@ class Alumno {
 	public Genero GetGenero(){
 		return genero;
 	}
+
+	public Calificaciones GetPromedio(){
+		return calif;
+	}
+
+	public Carrera GetCarrera(){
+		return carr;
+	}	
+
 }

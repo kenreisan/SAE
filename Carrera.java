@@ -37,4 +37,8 @@ class Carrera {
 			//}
 		} //while (opcion != 3);
 	}
+
+	public int GetClave(){
+		return clave;
+	}
 }

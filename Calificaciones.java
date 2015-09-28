@@ -5,6 +5,7 @@ class Calificaciones {
       private int geometria;
       private int algebra;
       private int estatica; 
+      private float prom;
    
 //CONSTRUCTORES
 
@@ -62,4 +63,9 @@ class Calificaciones {
    }
   } while (opcion != 5);
  }
+  public float GetProm(){
+    prom=(calculo+geometria+algebra+estatica)/4;
+    return prom;
+  }  
+
 }
