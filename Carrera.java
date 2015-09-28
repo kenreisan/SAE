@@ -3,36 +3,12 @@ class Carrera {
 //ATRIBUTOS
       private int clave;
       private String carrera;
+      private int inscritos;
   
 //CONSTRUCTORES
 
 //METODOS
-    /*   public void CapturaCalificaciones() {
-         System.out.println("\nCaptura de Calificaciones:\n");
-         LeeCalculo();
-         LeeGeometria();
-         LeeAlgebra();
-         LeeProgra();
-      }	
-
-      public void Clave() {
-         clave = 1000;
-         nombre = "Ingenieria en Computacion";
-      }
-
-      public void Carrera() {
-         geometria = Teclado.LeeEntero("Geometria: ");
-      }
-
-      public void LeeAlgebra() {
-         algebra = Teclado.LeeEntero("Algebra: ");
-      }
-
-      public void LeeProgra() {
-         progra = Teclado.LeeEntero("Progamacion Avanzada: ");
-      }*/
-
-	public void Listar() {		
+    	public void Listar() {		
 		System.out.println("\nClave: "+clave+" "+carrera);
 	}
 

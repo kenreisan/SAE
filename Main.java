@@ -6,19 +6,18 @@ class Main{
 		ArregloAlumno miarreglo;//aqui se declara la variable de tipo arreglo
 		Menu menu = new Menu();
 		Alumno obj, obj2;
-		//Estadisticas e;
+		Estadisticas e;
 		
 		
 		max = Teclado.LeeEntero("Dame el tamano del arreglo: ");
 		miarreglo= new ArregloAlumno(max); //aqui se crea el objeto Arreglo
 		//max_s = Teclado.LeeEntero("Dame el num de sueldos maximo por empleado:");
 		//max_t = Teclado.LeeEntero("Dame el num de telefonos maximo por empleado: ");
-		//e = new Estadisticas(miarreglo);
+		e = new Estadisticas(miarreglo);
 
 
 		do {
-			opcion = menu.ListaMenu("\n1)Agregar Alumno\n2)Listar Base\n3)Actualizar\n4)Buscar\n5)Borrar\n6)Ordenar\n7)Salir\nOpcion: ",8);
-			switch (opcion) {
+			opcion = menu.ListaMenu("\n1)Agregar Alumno\n2)Listar Base\n3)Actualizar\n4)Buscar\n5)Borrar\n6)Ordenar\n7)Estadisticas\n8)Salir\nOpcion: ",8);			switch (opcion) {
 				case 1: if (miarreglo.ValidaEspacio()){
 								obj = new Alumno();
 								obj.CapturaAlumno();
@@ -49,7 +48,7 @@ class Main{
 						  break;
 			    case 6: //miarreglo.Ordenar();
 						  break;
-				case 7: //e.CalculaEstadisticas();
+				case 7: e.CalcularEstadisticas();
 						break;
 
 			}

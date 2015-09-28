@@ -4,7 +4,7 @@ class Calificaciones {
       private int calculo;
       private int geometria;
       private int algebra;
-      private int progra;	
+      private int estatica; 
    
 //CONSTRUCTORES
 
@@ -14,8 +14,8 @@ class Calificaciones {
          LeeCalculo();
          LeeGeometria();
          LeeAlgebra();
-         LeeProgra();
-      }	
+         LeeEstatica();
+      } 
 
       public void LeeCalculo() {
          calculo = Teclado.LeeEntero("Calculo: ");
@@ -29,36 +29,37 @@ class Calificaciones {
          algebra = Teclado.LeeEntero("Algebra: ");
       }
 
-      public void LeeProgra() {
-         progra = Teclado.LeeEntero("Progamacion Avanzada: ");
+      public void LeeEstatica() {
+         estatica = Teclado.LeeEntero("Estatica: ");
       }
 
-	public void Listar() {		
-		System.out.println(calculo+",\n "+geometria+",\n "+algebra+",\n "+progra);
-	}
+ public void Listar() {  
+  System.out.println("\nCalificaciones: \n"+
+         "Calculo:\t"+calculo+"\nGeometria:\t"+geometria+"\nAlgebra:\t"+algebra+"\nEstatica:\t"+estatica);
+ }
 
-	public void Actualizar() {
-		int opcion;
-		Menu menu = new Menu();//creo el objeto menu
-		do {
-			opcion = menu.ListaMenu("1)Calculo\n2)Geometria\n3)Algebra\n4)Prog. Avanzada\n5)Salir\nOpcion: ",5);
-		   switch (opcion) {
-				case 1:
+ public void Actualizar() {
+  int opcion;
+  Menu menu = new Menu();//creo el objeto menu
+  do {
+   opcion = menu.ListaMenu("1)Calculo\n2)Geometria\n3)Algebra\n4)Prog. Avanzada\n5)Salir\nOpcion: ",5);
+     switch (opcion) {
+    case 1:
                LeeCalculo();
-				break;
+    break;
 
-				case 2:
+    case 2:
                LeeGeometria();
-				break;
+    break;
 
-				case 3:
+    case 3:
                LeeAlgebra();
-				break;
-				
+    break;
+    
             case 4:
-               LeeProgra();
-				break;
-			}
-		} while (opcion != 5);
-	}
+               LeeEstatica();
+    break;
+   }
+  } while (opcion != 5);
+ }
 }

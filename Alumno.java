@@ -3,14 +3,15 @@ class Alumno {
 //ATRIBUTOS
 	private int clave;
 	private String nom;	
-	private String genero;	
+	//private String genero;	
 	private Calificaciones calif;
 	private Carrera carr;
-	
+	private Genero genero;
 //CONSTRUCTORES
 	public Alumno(){
-		calif = new Calificaciones(); //se crea el objeto 
+		calif = new Calificaciones(); //se crea el objeto
 		carr = new Carrera();
+		genero = new Genero(); 
 	}
 	
 //METODOS
@@ -18,7 +19,8 @@ class Alumno {
 		System.out.println("Captura de Datos Personales:\n");
 		LeeClave();
 		LeeNom();
-		LeeGenero();
+		//LeeGenero();
+		genero.ElegirGenero();
 		carr.ElegirCarrera();
 		calif.CapturaCalificaciones();
 	}
@@ -31,12 +33,13 @@ class Alumno {
 		nom = Teclado.LeeCadena("Nombre: ");
 	}
 
-	public void LeeGenero(){
+	/*public void LeeGenero(){
 		genero = Teclado.LeeCadena("Genero: ");
-	}
+	}*/
 
 	public void Listar(){
-        System.out.print(clave+"\t"+nom+"\t"+genero+"\t");
+        System.out.print("\nCta: "+clave+"\t"+nom);
+        genero.Listar();
         calif.Listar();
     }
 	
@@ -52,7 +55,7 @@ class Alumno {
 				break;
 
 				case 2:
-				 	LeeGenero();
+				 	//LeeGenero();
 				break;
 
 				case 3:
@@ -64,5 +67,9 @@ class Alumno {
 
 	public int GetClave(){
 		return clave;
+	}
+
+	public Genero GetGenero(){
+		return genero;
 	}
 }

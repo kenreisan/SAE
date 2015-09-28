@@ -47,4 +47,12 @@ class ArregloAlumno{
 		indice--;
 		return aux;
 	}
+
+	public int GetIndice(){
+		return indice;
+	}
+
+	public Alumno GetAlumno(int pos){
+		return arreglo[pos];
+	}
 }
