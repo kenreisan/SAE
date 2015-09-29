@@ -128,13 +128,13 @@ class Estadisticas{
             est=est+obj.GetAlumno(i).GetPromedio().GetReproEst();
         }
         if (cal>=geo && cal>=alg && cal>=est)
-            System.out.println("Calculo es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+cal);
-        else if (geo>=cal && geo>=alg && geo>=est)
-            System.out.println("Geometria es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+geo);
-        else if (alg>=cal && alg>=geo && alg>=est)
-            System.out.println("Algebra es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+alg);
-        else if (est>=geo && est>=alg && est>=cal)
-            System.out.println("Estatica es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+est);
+            System.out.println("\nCalculo es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+cal);
+        if (geo>=cal && geo>=alg && geo>=est)
+            System.out.println("\nGeometria es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+geo);
+        if (alg>=cal && alg>=geo && alg>=est)
+            System.out.println("\nAlgebra es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+alg);
+        if (est>=geo && est>=alg && est>=cal)
+            System.out.println("\nEstatica es la Materia con el indice de reprobacion mas alto \n Alumnos que la reprobaron: "+est);
  }
 
     public void AlumnoxCarrera(){
@@ -184,57 +184,57 @@ class Estadisticas{
             "\nTotal de residentes foraneos: "+totalForaneo);
     }
 
-    public void MenuEstad() {  
-    int opcion;
-    Menu menu = new Menu();
-    do {
-    opcion = menu.ListaMenu("\n01)Alumnos Totales\n02)Alumnos por Carrera\n03)Distribucion de Generos"+
-                            "\n04)Alumnos del D.F. o Foraneos\n05)Promedio General\n06)Desempeño Alumnos"+
-                            "\n07)Materias mas Reprobadas\n08)Alumnos por Generacion\n09)Promedio de Edad"+
-                            "\n10)Distribucion de Edades\n11)Salir\nOpcion: ",11);
-     switch (opcion) {
-    case 1:
-        ContarHumanos();
-    break;
+        public void MenuEstad() {  
+            int opcion;
+            Menu menu = new Menu();
+            do {
+                opcion = menu.ListaMenu("\n01)Alumnos Totales\n02)Alumnos por Carrera\n03)Distribucion de Generos"+
+                                    "\n04)Alumnos del D.F. o Foraneos\n05)Promedio General\n06)Desempeño Alumnos"+
+                                    "\n07)Materias mas Reprobadas\n08)Alumnos por Generacion\n09)Promedio de Edad"+
+                                    "\n10)Distribucion de Edades\n11)Salir\nOpcion: ",11);
+            switch (opcion) {
 
-    case 2:
-        AlumnoxCarrera();
-    break;
-    
-    case 3:
-        GeneroCarrera();
-    break;
-    
-    case 4:
-        PersonasxRegion();
-    break;
+                case 1:
+                    ContarHumanos();
+                break;
 
-    case 5:
-        System.out.println("\nEl promedio total es: " + TotalProm());
-    break;
+                case 2:
+                    AlumnoxCarrera();
+                break;
+                
+                case 3:
+                    GeneroCarrera();
+                break;
+                
+                case 4:
+                    PersonasxRegion();
+                break;
 
-    case 6:
-        PromArribaAbajo();
-    break;
+                case 5:
+                    System.out.println("\nEl promedio total es: " + TotalProm());
+                break;
 
-    case 7:
-        Reprobadas();
-    break;
+                case 6:
+                    PromArribaAbajo();
+                break;
 
-    case 8:
-        AlumnosxGen();
-    break;
+                case 7:
+                    Reprobadas();
+                break;
 
-    case 9:
-        System.out.println("\nEl promedio de edad total es: " + PromEdad());
-    break;
+                case 8:
+                    AlumnosxGen();
+                break;
 
-    case 10:
-        EdadArribaAbajo();
-    break;
+                case 9:
+                    System.out.println("\nEl promedio de edad total es: " + PromEdad());
+                break;
 
+                case 10:
+                    EdadArribaAbajo();
+                break;
+            }
+        } while (opcion != 11);
     }
-  } while (opcion != 11);
- }
 }
     
