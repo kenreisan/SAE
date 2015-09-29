@@ -6,6 +6,10 @@ class Calificaciones {
       private int algebra;
       private int estatica; 
       private float prom;
+      private int npcal=0;
+      private int npgeo=0;
+      private int npalg=0;
+      private int npest=0;
    
 //CONSTRUCTORES
 
@@ -18,20 +22,28 @@ class Calificaciones {
          LeeEstatica();
       } 
 
-      public void LeeCalculo() {
+          public void LeeCalculo() {
          calculo = Teclado.LeeEntero("Calculo: ");
+         if (calculo<=5)
+          npcal=1;
       }
 
       public void LeeGeometria() {
          geometria = Teclado.LeeEntero("Geometria: ");
+         if (geometria<=5)
+          npgeo=1;
       }
 
       public void LeeAlgebra() {
          algebra = Teclado.LeeEntero("Algebra: ");
+         if (algebra<=5)
+          npalg=1;
       }
 
       public void LeeEstatica() {
          estatica = Teclado.LeeEntero("Estatica: ");
+         if (estatica<=5)
+          npest=1;
       }
 
  public void Listar() {  
@@ -66,6 +78,27 @@ class Calificaciones {
   public float GetProm(){
     prom=(calculo+geometria+algebra+estatica)/4;
     return prom;
-  }  
+  }
+
+    public int GetReproCal(){
+      npcal=npcal;
+      return npcal; 
+
+  }
+  public int GetReproGeo(){
+      npgeo=npgeo;
+      return npgeo; 
+
+  }
+  public int GetReproAlg(){
+      npalg=npalg;
+      return npalg; 
+
+  }
+  public int GetReproEst(){
+      npest=npest;
+      return npest; 
+  }
+  
 
 }

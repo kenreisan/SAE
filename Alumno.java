@@ -2,16 +2,22 @@ class Alumno {
 	
 //ATRIBUTOS
 	private int clave;
+	private int edad;
 	private String nom;	
 	//private String genero;	
 	private Calificaciones calif;
 	private Carrera carr;
 	private Genero genero;
+	private Generacion gen;
+	private Localidad localidad;
+	
 //CONSTRUCTORES
 	public Alumno(){
 		calif = new Calificaciones(); //se crea el objeto
 		carr = new Carrera();
-		genero = new Genero(); 
+		genero = new Genero();
+		gen = new Generacion();
+		localidad = new Localidad();
 	}
 	
 //METODOS
@@ -19,14 +25,21 @@ class Alumno {
 		System.out.println("Captura de Datos Personales:\n");
 		LeeClave();
 		LeeNom();
-		//LeeGenero();
+		LeeEdad();
+		localidad.ElegirLocalidad();
+		gen.LeeGeneracion();
 		genero.ElegirGenero();
 		carr.ElegirCarrera();
 		calif.CapturaCalificaciones();
+		
 	}
 	
 	public void LeeClave(){
 		clave = Teclado.LeeEntero("# de cuenta: ");
+	}
+
+	public void LeeEdad(){
+		edad = Teclado.LeeEntero("Edad: ");
 	}
 
 	public void LeeNom(){
@@ -65,6 +78,8 @@ class Alumno {
 		} while (opcion !=4);
 	}
 
+
+
 	public int GetClave(){
 		return clave;
 	}
@@ -80,5 +95,17 @@ class Alumno {
 	public Carrera GetCarrera(){
 		return carr;
 	}	
+
+	public int GetEdad(){
+		return edad;
+	}
+
+	public Generacion GetGeneracion(){
+		return gen;
+	}
+
+	public Localidad GetRegion(){
+		return localidad;
+	}
 
 }

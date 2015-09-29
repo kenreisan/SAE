@@ -33,9 +33,7 @@ class Carrera {
                clave = 3000;
                carrera = "Ingenieria Petrolera";
 				break;
-				
-			//}
-		} //while (opcion != 3);
+		} 
 	}
 
 	public int GetClave(){
