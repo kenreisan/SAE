@@ -1,7 +1,6 @@
 class Main{
 	
 	public static void main(String []args){
-		//variables locales
 		int dato, pos, max, max_s, max_t, opcion;
 		ArregloAlumno miarreglo;//aqui se declara la variable de tipo arreglo
 		Menu menu = new Menu();
@@ -11,8 +10,6 @@ class Main{
 		
 		max = Teclado.LeeEntero("Dame el tamano del arreglo: ");
 		miarreglo= new ArregloAlumno(max); //aqui se crea el objeto Arreglo
-		//max_s = Teclado.LeeEntero("Dame el num de sueldos maximo por empleado:");
-		//max_t = Teclado.LeeEntero("Dame el num de telefonos maximo por empleado: ");
 		e = new Estadisticas(miarreglo);
 
 
@@ -46,7 +43,7 @@ class Main{
 								System.out.println("Borrado...");
 								}
 						  break;
-			    case 6: //miarreglo.Ordenar();
+			    case 6: miarreglo.Ordenar();
 						  break;
 				case 7: e.CalcularEstadisticas();
 						break;

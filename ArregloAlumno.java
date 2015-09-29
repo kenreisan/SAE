@@ -55,4 +55,11 @@ class ArregloAlumno{
 	public Alumno GetAlumno(int pos){
 		return arreglo[pos];
 	}
+
+	public void Ordenar(){
+		Ordenamientos ordenar;
+            	ordenar = new Ordenamientos();
+            	ordenar.SortSeleccion(arreglo,indice);
+	}
+
 }
