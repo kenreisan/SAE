@@ -9,7 +9,7 @@ class Genero {
 //METODOS
 
 	public void Listar() {		
-		System.out.println("\nGenero: "+gen);
+		System.out.println("Genero: "+gen);
 	}
 
 	public void ElegirGenero() {

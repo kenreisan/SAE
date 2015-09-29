@@ -46,14 +46,15 @@ class Alumno {
 		nom = Teclado.LeeCadena("Nombre: ");
 	}
 
-	/*public void LeeGenero(){
-		genero = Teclado.LeeCadena("Genero: ");
-	}*/
-
 	public void Listar(){
-        System.out.print("\nCta: "+clave+"\t"+nom);
+        System.out.print("============================================================"+
+        				"\nCta: "+clave+"\t"+nom+"\tEdad: "+edad);
+        localidad.Listar();
         genero.Listar();
+        carr.Listar();
+        gen.Listar();
         calif.Listar();
+        System.out.print("============================================================");
     }
 	
 	public void Actualizar(){

@@ -9,7 +9,7 @@ class Carrera {
 
 //METODOS
     	public void Listar() {		
-		System.out.println("\nClave: "+clave+" "+carrera);
+		System.out.println("\nCarrera: "+carrera);
 	}
 
 	public void ElegirCarrera() {

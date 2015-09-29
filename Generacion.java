@@ -7,7 +7,7 @@ class Generacion {
 
 //METODOS
     	public void Listar() {		
-		System.out.println("\nGeneracion: "+ingreso);
+		System.out.println("Generacion: "+ingreso);
 	}
 
 		public void LeeGeneracion(){
