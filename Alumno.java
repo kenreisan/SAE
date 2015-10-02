@@ -47,7 +47,7 @@ class Alumno {
 	}
 
 	public void Listar(){
-        System.out.print("============================================================"+
+        System.out.print("\n============================================================"+
         				"\nCta: "+clave+"\t"+nom+"\tEdad: "+edad);
         localidad.Listar();
         genero.Listar();

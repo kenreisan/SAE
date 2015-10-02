@@ -48,7 +48,8 @@ class Calificaciones {
 
  public void Listar() {  
   System.out.println("\nCalificaciones: \n"+
-         "Calculo:\t"+calculo+"\nGeometria:\t"+geometria+"\nAlgebra:\t"+algebra+"\nEstatica:\t"+estatica);
+         "Calculo:\t"+calculo+"\nGeometria:\t"+geometria+"\nAlgebra:\t"+algebra+"\nEstatica:\t"+estatica+
+         "\nPROMEDIO: "+GetProm());
  }
 
  public void Actualizar() {
@@ -76,7 +77,7 @@ class Calificaciones {
   } while (opcion != 5);
  }
   public float GetProm(){
-    prom=(calculo+geometria+algebra+estatica)/4;
+    prom=(calculo+geometria+algebra+estatica)/4.0f;
     return prom;
   }
 
